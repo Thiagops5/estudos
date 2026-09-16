@@ -1,0 +1,30 @@
+/* 
+  Anatomia do CSS
+
+ * Declaration: é a propriedade que você quer alterar, por exemplo: color, font-size, background-color, etc.
+ * Selector: é o elemento que você quer alterar, por exemplo: h1, p, div, etc.
+ * {} - context: é o delimitador que indica o início e o fim da declaração.
+ * Property Value: é o valor que você quer atribuir à propriedade, por exemplo: red, 16px, #000, etc.
+ * Properties: são as características que você quer alterar, por exemplo: color, font-size, background-color, etc.
+ * a dieferença entre declaration e properties é que a declaration é a propriedade que você quer alterar, enquanto a properties são as características que você quer alterar.
+
+
+ os seletores principais são:
+  * Seletor Universal (*)
+  * Seletor de Elemento (h1, p, div, etc.)
+  * Seletor de Classe (.classe)
+  * Seletor de ID (#id)
+  * Seletor de Atributo ([atributo]). que voce coloca um atributo na tag html como por exemplo <input type="text" name="nome" placeholder="Digite seu nome"> e no css voce coloca [type="text"] { color: red; } e ele vai pegar todos os inputs que tiverem o atributo type com o valor text e aplicar a cor vermelha neles.
+  
+  * Seletor de Pseudo-classe (:hover, :focus, :nth-child(), etc.)
+  * Seletor de Pseudo-elemento (::before, ::after, ::first-letter, etc.)
+*/
+
+
+
+h1 {
+  color: red; 
+  font-size: 60px;
+  letter-spacing: 2;
+  text-transform: uppercase;
+}

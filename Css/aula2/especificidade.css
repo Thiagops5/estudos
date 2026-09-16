@@ -1,0 +1,63 @@
+/* Especificidade
+  - Cada seletor tem um peso que determina qual estilo será aplicado quando houver conflito entre seletores.
+  - Quanto mais específico for o seletor, maior será o seu peso e, consequentemente, maior será a prioridade do estilo aplicado.
+  - a soma dos pesos faz a declaração ser aplicada.
+
+  - O seletor mais específico tem prioridade sobre os menos específicos.
+  - Se dois seletores tiverem o mesmo peso, o último declarado será o que prevalecerá.
+  - O seletor universal (*) tem peso zero.
+  - O seletor de elemento (p, h1, div) tem peso um.
+  - O seletor de classe (.classe) tem peso dez.
+  - O seletor de id (#id) tem peso cem.
+
+  resumindo:
+  * - 0
+  element - 1 
+  .class - 10
+  #id - 100
+  atributo style inline - sobrepõe
+  !important - sobrepõe tudo ate mesmo o atributo style
+*/
+
+/* como no exeplo abaixo que o primeiro seletor (id) tem maior especificidade e maior força e o ultimo o mais genérico e que tem menos força */
+#text {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+h1 {
+  color: blue;
+}
+
+* {
+  color: black;
+}
+
+/* voce tambem pode fazer assim:  */
+
+h1#text.green {
+  color: yellow;
+}/* que seria o que tem mais força por ser mais específico */
+
+/* se voce colocasse coisas de forças iguais ele seria o último a ser aplicado pois ele le de cima para baixo */
+
+/* mas se voce colocar um atributo style no html ele vai puxar o estilo inline mesmo tendo o css, pois o estilo inline tem prioridade sobre o estilo definido no css  */
+
+/*  mas esse atributo no html só não vai funcionar se voce colocar um !important na frente do estilo. Só que isso não é bom pois vai te dar muita dor de cabeça e atribulações pois se voce não se lembra que colocou ele voce vai ficar tentando mudar o estilo em outro lugar mas não vai dar certo pq tem o !important em algum lugar */
+
+
+
+
+/*  em resumo, não use nem o atributo style e nem o !important pois isso só vai deixar dificil de manter e debugar o código depois. */
+
+
+
+
+/* lembre-se sempre que se tiver uma duvida, primeiro vá no mdn pesquisar sobre o que não entende e novas possibilidades, somente depois, se não entender ainda, voce vai em mecanismos de I.A. para obter ajuda. lembre-se: Estudo constante a fim de entender as propiedades e seus valores */
+
+/* toda as propiedades tem  valores. 
+A propiedade sendo a declaração do que voce quer fazer e o valor sendo o que você quer atribuir a ela, como o tamanho da fonte, a cor, etc.
+*/

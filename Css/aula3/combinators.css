@@ -1,0 +1,47 @@
+/*  Combinators
+  - Descendent
+  - List
+  - Next Sibling
+  - Child
+
+*/
+
+
+  /* 
+  exemplo 1 decendent:
+  article p {
+    color: red;
+  }
+  
+  article seria o pai/father e o p seria o filho/child, então o p vai pegar a cor vermelha pois ele é filho do article. se eu usasse somete p ele iria pegar ate mesmo os p fora do pai article */
+
+
+
+  /* 
+  exemplo 2 list:
+  é uma lista de seletores, que voce separa por virgulas e não importa se tem espaço ou não entre elas
+  */
+    span, mark {
+    color: red;
+  }
+
+
+
+
+  /* 
+  exemplo 3 next sibling:
+  ele vai pegar o p que vem logo depois do h2, mas se tiver outro elemento entre eles ele não vai pegar. e só vai pegar se o elemento estiver diretamente após o h2
+  */
+h2 + p {
+  color: red;
+}
+
+
+  /* 
+  exemplo 4 child:
+  ele vai pegar o elemento que é filho direto/ dentro do elemento pai, mas se tiver outro elemento dentro do filho com a mesma tag, ele não vai pegar. e só vai pegar se o elemento estiver diretamente dentro do pai. E isso só que não funcina com cor.
+  como no exmplo que ele vai pegar o primeiro  ul(filho) mais proximo do aside(pai). todos os de segundo nivel, ou seja, os dentro da ul, não serao afetados pois eles não são filos diretos do aside 
+  */
+ aside > ul {
+  margin-top: 60px;
+ }
